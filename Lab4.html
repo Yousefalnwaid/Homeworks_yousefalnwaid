@@ -1,0 +1,98 @@
+<html>
+  <head>
+   <title>
+     Tags of lab-4
+   </title> 
+    <meta charset="UTF-8">
+    
+  </head>
+<body>
+    
+<h1>
+    Welcome 
+</h1> 
+
+<!--هذه استمارة لادخال البيانات من المستخدم استعملت فيها علامة fieldset للترتيب وعمل عنوان لها وعلامات min و mix في حقول الاسم الاول والاخير وعلامات pplaceholder و required في حقل Email input radio لتحديد نوع الجنس وعلامة sselectلتحديد الحالة الاجتماعية -->
+<fieldset>
+  <legend>Presonal Information</legend>
+    Enter your first and last name please:<br>
+    <form method ="get">
+        First Name
+        <br>
+        <input type="text" name="firstname" min="3" max="10">
+        <br>
+        Last Name
+        <br>
+        <input type="text" name ="lastname" size="20">
+        <br>
+        Email
+        <br>
+        <input type="email" name="email" placeholder="Example@gmail" required>
+        <br>
+        Choose your gender
+        <br>
+        <input type="radio" name="gender">male
+        <input type="radio" name="gender">female
+        <br>
+        Please Choose your Social status:-
+        <br>
+       <select name="cars">
+       <option value ="single">single</option>
+       <option value ="Married">Married</option>
+       <option value ="divorced">divorced</option>
+       </select>
+       <br>
+      <input type="submit" name="submit">
+        
+    </form>
+    </fieldset>
+    <br>
+    
+    <!-- 
+    وهنا صيغة لادخال معلومات الحساب اذا كان مسجلا من قبل -->
+    If you have an account with us,Enter the Informations about it here:-
+    <br><br>
+    <fieldset>
+      <legend>Accont</legend>
+    <form method="post">
+        Please Enter username and password
+        <br>
+        username<br>
+        <input type="text" name="username">
+        <br>
+        Password
+        <br>
+        <input type="password" name="password">
+        <br>
+        <input type="submit">
+        
+    </form>
+    </fieldset>
+     
+    <br>
+    <fieldset>
+      <legend>Job Information</legend>
+      Where did you work before?<br>
+      <input type="text" name="ex_job" maxlength="10">
+      <br>
+      How many years did you work there?<br>
+     <input type="number" name="period">
+     <br>
+     Why did you leave the previous job?<br>
+     <input type="text" name="causing" maxlength="20">
+     <br>
+     <input type="submit" value="تم">
+    </fieldset>
+  
+  <!--وهنا مساحة نصية فيها معلومات التواصل-->
+  <textarea name="contact" rows="6" columns="10">
+    Contact Us:
+    
+    facebook
+    WhatsApp
+    email
+    </textarea>
+    
+
+</body>    
+</html>
