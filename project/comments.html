@@ -1,0 +1,46 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<header>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="comments.html">Comments</a></li>
+    <li><a href="table.html">Table</a></li>
+  </ul>
+</nav>
+  <img src="images/logo.png" alt="Site Logo">
+  
+</header>
+<footer>
+  <p>عمل الطالب يوسف محمد علي ثابت النويد المجموعة الأولى</p>
+</footer>
+<section>
+  
+  <h2>Comments</h2>
+  <div class="comment">
+    <img src="path/to/logo.png" alt="Logo">
+    <h3>Name</h3>
+    <p>Comment text goes here</p>
+    <button onclick="incrementApproval()">Approval</button>
+    <span id="approvalCount">0</span>
+    <button onclick="incrementDisapproval()">Disapproval</button>
+    <span id="disapprovalCount">0</span>
+  </div>
+</section>
+
+<script>
+  var approvalCount = 0;
+  var disapprovalCount = 0;
+
+  function incrementApproval() {
+    approvalCount++;
+    document.getElementById("approvalCount").innerHTML = approvalCount;
+  }
+function incrementDisapproval() {
+    disapprovalCount++;
+    document.getElementById("disapprovalCount").innerHTML = disapprovalCount;
+  }
+</script>

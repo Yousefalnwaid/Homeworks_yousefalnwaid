@@ -1,0 +1,52 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<header>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="comments.html">Comments</a></li>
+    <li><a href="table.html">Table</a></li>
+  </ul>
+</nav>
+  <img src="images/logo.png" alt="Site Logo">
+</header>
+<footer>
+  <p> عمل الطالب يوسف محمد علي ثابت النويد </p>
+</footer>
+<section>
+  <h2>Table</h2>
+  <form id="tableForm">
+    <input type="text" placeholder="Name" required>
+    <input type="text" placeholder="Age" required>
+    <input type="text" placeholder="Country" required>
+    <button type="submit">Submit</button>
+  </form>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Country</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+</section>
+<script>
+  document.getElementById("tableForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    var name = document.getElementById("tableForm").elements[0].value;
+    var age = document.getElementById("tableForm").elements[1].value;
+    var country = document.getElementById("tableForm").elements[2].value;
+
+    var newRow = document.getElementById("dataTable").insertRow();
+    newRow.innerHTML = "<td>" + name + "</td><td>" + age + "</td><td>" + country + "</td>";
+
+    // إعادة تعيين حقول النموذج
+    document.getElementById("tableForm").reset();
+  });
+</script>

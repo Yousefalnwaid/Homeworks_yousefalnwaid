@@ -1,0 +1,47 @@
+<!--هذا ملف الصفحة الثانية فيه خيار about us عند الضغط عليه يظهر خانات لتعبئة معلومات  المستخدم-->
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<header>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="comments.html">Comments</a></li>
+    <li><a href="table.html">Table</a></li>
+  </ul>
+</nav>
+  <img src="images/logo.png" alt="Site Logo">
+  
+</header>
+<footer>
+  <p> عمل الطالب يوسف محمد علي النويد المجموعة الأولى</p>
+</footer>
+<section>
+  <h2>About Us</h2>
+  <button onclick="toggleForm()">Contact Us</button>
+  <form id="contactForm" style="display: none;">
+    <input type="text" placeholder="Name" required>
+    <input type="email" placeholder="Email" required>
+    <input type="tel" placeholder="Phone" required>
+    <input type="text" placeholder="Subject" required>
+    <textarea placeholder="Message" required></textarea>
+    <input type="checkbox" required> I agree to the terms and conditions
+    <button type="submit">Submit</button>
+  </form>
+  <p id="thankYouMessage" style="display: none;">Thanks for the communication.</p>
+</section>
+<script>
+  function toggleForm() {
+    var form = document.getElementById("contactForm");
+    var thankYouMessage = document.getElementById("thankYouMessage");
+    if (form.style.display === "none") {
+      form.style.display = "block";
+      thankYouMessage.style.display = "none";
+    } else {
+      form.style.display = "none";
+      thankYouMessage.style.display = "block";
+    }
+  }
+</script>
